@@ -1,0 +1,20 @@
+class Solution(object):
+    def sortSentence(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        temp = s.split(" ")
+        temp1 = []
+        numofwords = len(temp)
+        for i in range(numofwords):
+            temp1.append("a")
+        for word in temp:
+            for i in range(numofwords):
+                n = str(i + 1)
+                if n in word:
+                    word1 = word.replace(n, '')
+                    temp1[i] = word1
+                    break
+        sortedsen = " ".join(temp1)
+        return sortedsen
