@@ -5,10 +5,8 @@ class Solution(object):
         :rtype: str
         """
         temp = s.split(" ")
-        temp1 = []
         numofwords = len(temp)
-        for i in range(numofwords):
-            temp1.append("a")
+        temp1 = ["a"] * numofwords
         for word in temp:
             for i in range(numofwords):
                 n = str(i + 1)
